@@ -1,0 +1,52 @@
+package simplilearn.phase1.proj;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class project {
+	public static void main(String[] args) {
+		List<String> results = new ArrayList<String>();
+		while(true) {
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("\nChoose the option\n1.Enter File Name\n2.Business Operation\n3.Search File\n4.Exit");
+			int a = sc.nextInt();
+			if(a==1) {
+				File[] files = new File("E:\\simplillearn\\projectdata").listFiles();
+				//If this pathname does not denote a directory, then listFiles() returns null. 
+
+				for (File file : files) {
+				    if (file.isFile()) {
+				        results.add(file.getName());
+				    }
+				}
+				
+				continue;
+			}
+			else if(a==2) {
+				System.out.println("1.Add File\n 2. Delete File \n 3. Search File \n 4. Go back");
+				int b = sc.nextInt();
+				switch(b) {
+					case 1:
+						break;
+					case 2:
+						break;
+					case 3:
+						break;
+					case 4: 
+						continue;
+				}
+				continue;
+			}
+			else if(a==3) {
+				continue;
+			}
+			else if(a==4) {
+				break;
+			}
+			sc.close();
+		}
+	}
+}

@@ -1,0 +1,17 @@
+package simplilearn.fh.pack;
+import java.io.*;
+public class fileHandling {
+
+	public void readFile() {
+		  File file = new File("C:\\Users\\pankaj\\Desktop\\test.txt");
+		  BufferedReader br = new BufferedReader(new FileReader(file));
+		  String st;
+		  st = br.readLine()
+		  while ((st = br.readLine()) != null)
+			  System.out.println(st);
+	}
+	
+	public void appendFile() {
+		
+	}
+}
